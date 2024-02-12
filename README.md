@@ -19,5 +19,5 @@ docker build -t ulp-website:latest .
 2. Ejecutar el contenedor:
 
 ```bash
-docker run -d -v ./src:/app/src -p 4321:4321 ulp-website:latest
+docker run -d -v ./src:/app/src -v ./public:/app/public -p 4321:4321 ulp-website:latest
 ```
