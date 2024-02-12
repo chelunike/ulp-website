@@ -1,41 +1,51 @@
 ---
 const menuitems = [
   {
-    title: "Home",
-    path: "/#home",
+    title: "Inicio",
+    path: "/",
   },
   {
-    title: "About",
-    path: "/#about",
+    title: "Información",
+    path: "javascript:void(0)",
+    children: [
+      { title: "¿Quiénes somos?", path: "/about" },
+      { title: "Ediciones anteriores", path: "/ediciones_anteriores" },
+      { title: "Preguntas frecuentes", path: "/preguntas_frecuentes" },
+      { title: "Localización y horarios", path: "/localizacion" },
+      { title: "Aviso legal", path: "/aviso_legal"}
+    ],
   },
   {
-    title: "Pricing",
-    path: "/#pricing",
+    title: "Competiciones",
+    path: "javascript:void(0)",
+    children: [
+      { title: "League of Legends", path: "/competiciones/league-of-legends" },
+      { title: "Valorant", path: "/competiciones/valorant" },
+      { title: "Rocket League", path: "/competiciones/rocket-league" },
+      { title: "EA Sports FC 24", path: "/competiciones/ea-sports-fc-24" },
+      { title: "Mario Kart", path: "/competiciones/mario-kart" },
+      { title: "Wii Sports", path: "/competiciones/wii-sports" },
+      { title: "Super Smash Bros Ultimate", path: "/competiciones/smash" },
+      { title: "Pokémon", path: "/competiciones/pokemon" },
+      { title: "Futbolín", path: "/competiciones/futbolin" },
+      { title: "Juego Libre", path: "/competiciones/juego-libre" }
+    ],
   },
   {
-    title: "Team",
-    path: "/#team",
-  },
-  {
-    title: "Contact",
-    path: "/#contact",
-  },
-  {
-    title: "Blog",
+    title: "Noticias",
     path: "/blog",
   },
   {
-    title: "Pages",
-    path: "javascript:void(0)",
-    children: [
-      { title: "About Page", path: "/about" },
-      { title: "Pricing Page", path: "/pricing" },
-      { title: "Contact Page", path: "/contact" },
-      { title: "Blog Grid Page", path: "/blog" },
-      { title: "Sign Up Page", path: "/signup" },
-      { title: "Sign In Page", path: "/signin" },
-      { title: "404 Page", path: "/404" },
-    ],
+    title: "Patrocinadores",
+    path: "/patrocinadores",
+  },
+{
+   title: "Colaboradores",
+   path: "/colaboradores",
+},
+  {
+    title: "Contacto",
+    path: "/contacto",
   },
 ];
 ---
@@ -47,13 +57,13 @@ const menuitems = [
         <a href="/" class="navbar-logo block w-full py-5">
           {(Astro.url.pathname === '/') ? (
             <img
-              src="/assets/logo/logo-white.svg"
-              alt="logo"
+              src="/assets/logo/logo-white.png"
+              alt=""
               class="header-logo w-full"
             />
           ) : (
-            <img src="/assets/logo/logo.svg" alt="logo" class="w-full dark:hidden" />
-            <img src="/assets/logo/logo-white.svg" alt="logo" class="w-full hidden dark:block" />
+            <img src="/assets/logo/logo-black.png" alt="logo" class="w-full dark:hidden" />
+            <img src="/assets/logo/logo-white.png" alt="logo" class="w-full hidden dark:block" />
           )}
           
         </a>
@@ -175,20 +185,6 @@ const menuitems = [
               </svg>
             </span>
           </button>
-          <div class="hidden sm:flex">
-            <a
-              href="/signin"
-              class={`${Astro.url.pathname === '/' ? 'loginBtn py-2 px-[22px] text-base font-medium text-white hover:opacity-70' : 'loginBtn py-2 px-[22px] text-base font-medium text-dark dark:text-white hover:opacity-70'}`}
-            >
-              Sign In
-            </a>
-            <a
-              href="/signup"
-              class={`${Astro.url.pathname === '/' ? 'signUpBtn rounded-md bg-white bg-opacity-20 py-2 px-6 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark' : 'signUpBtn rounded-md bg-primary py-2 px-6 text-base font-medium text-white duration-300 ease-in-out hover:bg-blue-dark'}`}
-            >
-              Sign Up
-            </a>
-          </div>
         </div>
       </div>
     </div>
