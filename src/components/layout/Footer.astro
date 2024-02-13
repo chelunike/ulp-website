@@ -13,78 +13,89 @@ publishedBlogEntries.sort(function (a, b) {
 
 const footerLinks = [
   {
-    header: 'About Us',
+    header: 'Información',
     links: [
       {
-        name: 'Home',
+        name: '¿Quienes somos?',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'Features',
+        name: 'Ediciones Anteriores',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'About',
+        name: 'FAQs',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'Testimonial',
+        name: 'Localización y Horarios',
+        href: '/',
+        isExternal: false,
+      },
+      {
+        name: 'Aviso Legal',
         href: '/',
         isExternal: false,
       },
     ],
   },
   {
-    header: 'Features',
+    header: 'Competiciones',
     links: [
       {
-        name: 'How it works',
+        name: 'League of Legends',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'Privacy policy',
+        name: 'Valorant',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'Terms of Service',
+        name: 'Rocket League',
         href: '/',
         isExternal: false,
       },
       {
-        name: 'Refund policy',
+        name: 'EA Sports FC 24',
+        href: '/',
+        isExternal: false,
+      },
+      {
+        name: 'Mario Kart',
+        href: '/',
+        isExternal: false,
+      },
+      {
+        name: 'Wii Sports',
+        href: '/',
+        isExternal: false,
+      },
+      {
+        name: 'Super Smash Bross Ultimate',
+        href: '/',
+        isExternal: false,
+      },
+      {
+        name: 'Pokémon',
+        href: '/',
+        isExternal: false,
+      },
+      {
+        name: 'Juego Libre',
         href: '/',
         isExternal: false,
       },
     ],
   },
   {
-    header: 'Our Products',
+    header: '',
     links: [
-      {
-        name: 'Lineicons',
-        href: 'https://lineicons.com/',
-        isExternal: true,
-      },
-      {
-        name: 'TailAdmin',
-        href: 'https://tailadmin.com/',
-        isExternal: true,
-      },
-      {
-        name: 'TailGrids',
-        href: 'https://tailgrids.com/',
-        isExternal: true,
-      },
-      {
-        name: 'UIdeck',
-        href: 'https://uideck.com/',
-        isExternal: true,
-      },
+      
     ],
   },
   {
@@ -157,7 +168,7 @@ style="fill:#000000;">
           </div>
         </div>
       </div>
-      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
         <div class="mb-10 w-full">
           <h4 class="mb-9 text-lg font-semibold text-white">{footerLinks[0].header}</h4>
           <ul>
@@ -180,10 +191,10 @@ style="fill:#000000;">
           </ul>
         </div>
       </div>
-      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
+      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-5/12 xl:w-4/12">
         <div class="mb-10 w-full">
           <h4 class="mb-9 text-lg font-semibold text-white">{footerLinks[1].header}</h4>
-          <ul>
+          <ul style="column-count: 2">
             {footerLinks[1].links.map(link => {
               if('name' in link) {
                 return (
@@ -203,29 +214,7 @@ style="fill:#000000;">
           </ul>
         </div>
       </div>
-      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
-        <div class="mb-10 w-full">
-          <h4 class="mb-9 text-lg font-semibold text-white">{footerLinks[2].header}</h4>
-          <ul>
-            {footerLinks[2].links.map(link => {
-              if('name' in link) {
-                return (
-                  <li>
-                    <a
-                      href={link.href}
-                      class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                      target={link.isExternal ? '_blank' : undefined}
-                      rel={link.isExternal ? 'noopener' : undefined}
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                );
-              }
-            })}
-          </ul>
-        </div>
-      </div>
+      
       <div class="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
         <div class="mb-10 w-full">
           <h4 class="mb-9 text-lg font-semibold text-white">{footerLinks[3].header}</h4>
