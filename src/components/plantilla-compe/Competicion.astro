@@ -9,7 +9,7 @@ import Inscripsection from './Inscripsection.astro';
 //Para obtener el ex_link hay que ir al spreadsheet y luego archivo > compartir > publicar en la web
 //en la pestaña LINK elegir la hoja y copiar ese link generado
 
-const {titulo, descripcion, aula, horario, ex_link, form_lik, reg_link} = Astro.props;
+const {titulo, descripcion, aula, horario, ex_link, form_link, reg_link} = Astro.props;
 ---
 
 <Layout>
@@ -25,6 +25,6 @@ const {titulo, descripcion, aula, horario, ex_link, form_lik, reg_link} = Astro.
     <Fragment slot="_aula">{aula}</Fragment>
     <Fragment slot="_horario">{horario}</Fragment>
   </Localihorasection>
-  <Inscripsection form_link={form_lik} />
+  <Inscripsection link={form_link} />
   <Excelsection link={ex_link} />
 </Layout>
