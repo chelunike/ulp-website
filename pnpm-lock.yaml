@@ -20,9 +20,6 @@ dependencies:
   astro-compress:
     specifier: ^2.0.15
     version: 2.2.10
-  sharp:
-    specifier: ^0.33.2
-    version: 0.33.2
   swiper:
     specifier: ^11.0.4
     version: 11.0.6
@@ -35,10 +32,10 @@ dependencies:
 
 devDependencies:
   prettier:
-    specifier: ^3.0.3
+    specifier: ^3.2.5
     version: 3.2.5
   prettier-plugin-astro:
-    specifier: ^0.12.0
+    specifier: ^0.12.3
     version: 0.12.3
   prettier-plugin-tailwindcss:
     specifier: ^0.5.4
