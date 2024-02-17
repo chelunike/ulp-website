@@ -1,8 +1,11 @@
 ---
-const {link} = Astro.props;
+const {link, img_path} = Astro.props;
 ---
 <!-- ====== Inscripción Section Start -->
-<section class="relative overflow-hidden bg-primary py-20 lg:py-[115px]">
+<section class="relative overflow-hidden bg-gradient-to-bl from-primary/80 from-30% via-secondary/85 via-70% to-tertiary/95 py-20 lg:py-[115px]">
+  <div class="absolute inset-0 min-h-full min-w-full -z-10 flex items-center justify-center">
+    <img src={img_path} alt="" />
+  </div>
   <div class="container">
     <div class="-mx-4 flex flex-wrap items-center">
       <div class="w-full px-4">
