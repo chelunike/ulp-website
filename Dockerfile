@@ -1,14 +1,18 @@
 FROM node:lts-alpine as builder
 
+# Enable and configure pnpm
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable 
+
 WORKDIR /app
 
 COPY . /app
 
-# Ensure that latest minor and patch for NPM is installed
-RUN npm install -g npm@10
+# Install dependencies and enable cache
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
-# Install and build
-RUN npm install
+# Build app
 RUN npm run build
 
 FROM nginx:alpine as runtime
