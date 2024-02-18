@@ -17,6 +17,7 @@ const {titulo, descripcion, aula, horario, ex_link, form_link, reg_link} = Astro
     <Fragment slot="title">{titulo}</Fragment>
     <Fragment slot="texto">{descripcion}</Fragment>
   </Breadcrumb>
+  <Inscripsection link={form_link} />
   <Reglasection link={reg_link}>
     <Fragment slot="col-1"><slot name="reglas-col-1" /></Fragment>
     <Fragment slot="col-2"><slot name="reglas-col-2" /></Fragment>
@@ -25,6 +26,5 @@ const {titulo, descripcion, aula, horario, ex_link, form_link, reg_link} = Astro
     <Fragment slot="_aula">{aula}</Fragment>
     <Fragment slot="_horario">{horario}</Fragment>
   </Localihorasection>
-  <Inscripsection link={form_link} />
   <Excelsection link={ex_link} />
 </Layout>
