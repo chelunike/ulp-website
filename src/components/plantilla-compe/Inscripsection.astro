@@ -3,10 +3,10 @@ const {link, img_path} = Astro.props;
 ---
 <!-- ====== Inscripción Section Start -->
 <section class="relative overflow-hidden bg-gradient-to-bl from-primary/80 from-30% via-secondary/85 via-70% to-tertiary/95 py-20 lg:py-[115px]">
-  <div class="absolute inset-0 min-h-full min-w-full -z-10 flex items-center justify-center">
-    <img src={img_path} alt="" />
+  <div class="absolute inset-0 min-h-full min-w-full -z-10">
+    <img src={img_path} alt="" class="w-full h-full object-cover" />
   </div>
-  <div class="container">
+  <div class="container relative z-10">
     <div class="-mx-4 flex flex-wrap items-center">
       <div class="w-full px-4">
         <div class="hero-content wow fadeInUp mx-auto max-w-[780px] text-center" data-wow-delay=".2s">
@@ -14,7 +14,7 @@ const {link, img_path} = Astro.props;
             ¡Anímate a participar!
           </h1>
           <p class="mx-auto mb-9 max-w-[600px] font-medium text-base text-white sm:text-lg sm:leading-[1.44]">
-            Las inscripciones estan abiertas hasta el <u>3 de marzo</u>.
+            Las inscripciones están abiertas hasta el <u>3 de marzo</u>.
           </p>
           <a href={link}
             class="inline-flex items-center justify-center rounded-md bg-white py-[14px] px-7 text-center text-base font-medium text-dark shadow-lg transition duration-300 ease-in-out hover:text-body-color hover:bg-gray-2">
