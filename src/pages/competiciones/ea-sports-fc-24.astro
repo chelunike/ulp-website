@@ -1,0 +1,17 @@
+---
+import Competicion from '../../components/plantilla-compe/Competicion.astro';
+
+const titulo = "EA Sports FC 24";
+const desc = "Demuestra tus habilidades futbolísticas en este torneo. Gestiona tu equipo, ejecuta jugadas maestras y anota goles espectaculares para convertirte en el campeón de esta 6ª Edición.";
+const ex_link = "";
+const reg_link = "https://drive.google.com/file/d/1fZNPucell0AbORSJbzovEsliH2-yktBb/view?usp=drive_link";
+const form_link = "https://forms.gle/4iPFNEefhWqGf6KV9";
+const img_path = "/assets/backgrounds/ea-sports-fc-24.png";
+const aula = "A1";
+const horario = "10:00h";
+
+---
+
+<Competicion titulo={titulo} descripcion={desc} aula={aula} horario={horario}
+    ex_link={ex_link} reg_link={reg_link} form_link={form_link} img_path={img_path} >
+</Competicion>
