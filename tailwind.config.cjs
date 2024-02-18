@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors');
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   darkMode: "class",
-	theme: {
+  theme: {
     screens: {
       sm: "540px",
       // => @media (min-width: 576px) { ... }
@@ -41,9 +41,10 @@ module.exports = {
           7: "#D1D5DB",
           8: "#E5E7EB",
         },
-        primary: "#3758F9",
-        "blue-dark": "#1B44C8",
-        secondary: "#13C296",
+        primary: "rgb(0, 68, 101)",
+        "blue-dark": "rgb(14, 40, 89)",
+        secondary: "rgb(0, 87, 108)",
+        tertiary: "rgb(0, 100, 113)",
         "body-color": "#637381",
         "body-secondary": "#8899A8",
         warning: "#FBBF24",
@@ -64,5 +65,5 @@ module.exports = {
       },
     },
   },
-	plugins: [],
-}
+  plugins: [],
+};

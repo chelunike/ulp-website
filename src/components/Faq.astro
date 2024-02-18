@@ -73,7 +73,7 @@ const faqs = [
   class="relative z-20 overflow-hidden bg-white dark:bg-dark pt-20 pb-8 lg:pt-[120px] lg:pb-[50px]"
 >
   <div class="container mx-auto">
-    <div class="flex flex-wrap -mx-4">
+    <div class="flex flex-wrap">
       <div class="w-full px-4">
         <div class="mx-auto mb-[60px] max-w-[520px] text-center">
           <span class="block mb-2 text-lg font-semibold text-primary">
@@ -90,8 +90,8 @@ const faqs = [
       </div>
     </div>
 
-    <div class="-mx-4 flex flex-wrap">
-      <div class="w-full px-4 lg:w-1/2">
+    <div class="flex flex-wrap">
+      <div class="w-full lg:w-1/2">
         {
           faqs.map((faq, index) => {
             if (index % 2 !== 0) {

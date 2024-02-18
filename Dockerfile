@@ -1,15 +1,26 @@
-FROM node:lts-alpine as runtime
+FROM node:lts-alpine as builder
+
 WORKDIR /app
 
 COPY . /app
 
+# Ensure that latest minor and patch for NPM is installed
+RUN npm install -g npm@10
+
+# Install and build
 RUN npm install
 RUN npm run build
 
-ENV HOST=0.0.0.0
-ENV PORT=4321
+FROM nginx:alpine as runtime
 
-EXPOSE 4321
+# Remove default nginx static assets
+RUN rm -rf /usr/share/nginx/html
 
-CMD npm run dev -- --host
-#CMD node ./dist/server/entry.mjs
+# Copy built site
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expose default Nginx port
+EXPOSE 80
+
+# Start Nginx with global directives and daemon turned off
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
