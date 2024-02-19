@@ -1,14 +1,18 @@
 FROM node:lts-alpine as builder
 
+# Enable and configure pnpm
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable 
+
 WORKDIR /app
 
 COPY . /app
 
-# Ensure that latest minor and patch for NPM is installed
-RUN npm install -g npm@10
+# Install dependencies and enable cache
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
-# Install and build
-RUN npm install
+# Build app
 RUN npm run build
 
 FROM nginx:alpine as runtime
@@ -18,6 +22,12 @@ RUN rm -rf /usr/share/nginx/html
 
 # Copy built site
 COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Remove default nginx config
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy custom nginx config
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose default Nginx port
 EXPOSE 80
