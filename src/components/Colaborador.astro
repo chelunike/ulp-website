@@ -1,0 +1,86 @@
+---
+// Colaborador.astro
+const { nombre, descripcion, logo, web, rrss } = Astro.props;
+---
+
+<div class="colaborador">
+    <img src={logo} alt={`Logotipo de ${nombre}`} class="logo" />
+    <div class="contenido">
+        <h3 class="nombre">{nombre}</h3>
+        <p class="descripcion">{descripcion}</p>
+        <a href={web} target="_blank" class="web-link">Sitio Web</a>
+        <div class="redes-sociales">
+            {Object.entries(rrss).map(([red, enlace]) => (
+                <a href={enlace as string} target="_blank" class="rrss-link">{red}</a>
+            ))}
+        </div>
+    </div>
+</div>
+
+<style>
+.colaborador {
+    background: rgb(0, 68, 101);
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.contenido {
+    padding: 0 15px;
+}
+
+.nombre {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.descripcion {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.web-link, .rrss-link {
+    display: inline-block;
+    background: rgb(0, 100, 113);
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.web-link:hover, .rrss-link:hover {
+    background: rgb(14, 40, 89);
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+}
+
+</style>
