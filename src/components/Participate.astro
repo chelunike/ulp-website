@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumb from '../components/layout/Breadcrumb.astro'
+
+const {empresa, descripcion, logo, rrss1, rrss2, rrs3, rrs4} = Astro.props;
+---
+
+<Layout>
+    <Breadcrumb>
+        <Fragment slot="title">{empresa}</Fragment>
+        <Fragment slot="texto">{descripcion}</Fragment>
+    </Breadcrumb>
+
+    <Fragment slot="logo">
+        <img src={logo} alt={`Logotipo de ${empresa}`} />
+    </Fragment>
+</Layout>

@@ -1,3 +1,93 @@
 ---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumb from '../../components/layout/Breadcrumb.astro';
+import Colaborador from '../../components/Colaborador.astro';
+
+// Aquí podrías definir la información de cada colaborador, o incluso obtenerla de una API o un archivo de datos
+const colaboradores = [
+    {   
+        nombre: "Universidad de Granada",
+        descripcion: "La Universidad de Granada, institución con casi quinientos años de historia, destaca en traducción e interpretación, ingeniería informática y matemáticas, siendo un referente educativo a nivel mundial.",
+        logo: '/assets/participan/White/Organismos/ugr-white.png',
+        web: "http://www.ugr.es",
+        rrss: {
+            "Facebook": "https://www.facebook.com/universidadgranada/",
+            "Twitter / X": "https://twitter.com/canalugr",
+            "Youtube": "https://www.youtube.com/user/UGRmedios"
+        }
+    },
+    {
+        nombre: "ETSIIT",
+        descripcion: "La ETSIIT, líder en estudios de informática y telecomunicaciones, será la sede del evento, ofreciendo espacios idóneos para el desarrollo de todas las actividades y competiciones programadas.",
+        logo: '/assets/participan/White/Organismos/etsiit-vertical-white.png',
+        web: "https://etsiit.ugr.es",
+        rrss: {
+            "Twitter / X": "https://twitter.com/etsiit_ugr"
+        }
+    },
+    {
+        nombre: "TSTC",
+        descripcion: "El Departamento de Teoría de la Señal, Telemática y Comunicaciones de la UGR, centrado en Ingeniería Telemática y Teoría de la Señal y Comunicaciones, contribuye al avance tecnológico y educativo.",
+        logo: '/assets/participan/White/Organismos/tstc-white.png',
+        web: "https://tstc.ugr.es",
+        rrss: {}
+    },
+    {
+        nombre: "CSIRC",
+        descripcion: "El CSIRC apoya la UGR LAN Party brindando soporte en red para garantizar el éxito de las competiciones en línea, impulsando el uso eficiente de las TIC en la docencia, investigación y gestión.",
+        logo: '/assets/participan/White/Organismos/csirc-white.png',
+        web: "https://csirc.ugr.es",
+        rrss: {}
+    },
+    {
+        nombre: "OSL",
+        descripcion: "La Oficina de Software Libre de la UGR promueve el uso del Software Libre, ofreciendo soporte, formación y reciclaje de equipos informáticos. Este año aportará proyectores de video para las distintas zonas del evento.",
+        logo: '/assets/participan/White/Organismos/osl-white.png',
+        web: "https://osl.ugr.es",
+        rrss: {
+            "Twitter / X": "https://twitter.com/OSLUGR",
+            "Instagram": "https://www.instagram.com/oslugr/"
+        }
+    },
+    {
+        nombre: "DEIIT",
+        descripcion: "La Delegación de Estudiantes de la ETSIIT se implica en la organización de la UGR LAN Party, fomentando la participación estudiantil y el asociacionismo en eventos de carácter tecnológico y educativo.",
+        logo: '/assets/participan/White/Organismos/deiit-white.png',
+        web: "https://deiit.ugr.es",
+        rrss: {
+            "Twitter / X": "https://twitter.com/deiitugr",
+            "Instagram": "https://www.instagram.com/DEIITUGR/"
+        }
+    },
+    {
+        nombre: "AESIT",
+        descripcion: "La Asociación de Antiguos Estudiantes de la ETSIIT fomenta los lazos entre egresados y la ETSIIT, colaborando en la UGR LAN Party a través de la organización de actividades como el torneo de Futbolín.",
+        logo: '/assets/participan/White/Organismos/aesit-white.png',
+        web: "https://aesit.es",
+        rrss: {
+            "Twitter / X": "https://twitter.com/aesit_ugr"
+        }
+    }
+];
 
 ---
+
+<Layout>
+    <Breadcrumb>
+        <Fragment slot="title">Colaboradores</Fragment>
+        <Fragment slot="texto">Conoce a los colaboradores que hacen posible este evento.</Fragment>
+    </Breadcrumb>
+
+    <div class="colaboradores">
+        {colaboradores.map(colaborador => (
+            <Colaborador {...colaborador} />
+        ))}
+    </div>
+</Layout>
+
+<style>
+.colaboradores {
+    /* Estilos para el contenedor de colaboradores */
+}
+</style>
+

@@ -1,0 +1,104 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumb from '../../components/layout/Breadcrumb.astro';
+import Colaborador from '../../components/Colaborador.astro';
+
+const patrocinadores = [
+    {
+        nombre: "GRANADA C.F.",
+        descripcion: "El Granada Club de Fútbol se une como patrocinador oficial, aportando su espíritu deportivo y recursos para los torneos de FIFA y Rocket League, incluyendo 2 PlayStation 5 y 4 mandos para el torneo de EA Sports FC 24.",
+        logo: '/assets/participan/White/Empresas/granada-cf-white.png',
+        web: "https://www.granadacf.es",
+        rrss: {
+            "Twitter / X": "https://twitter.com/GranadaCF",
+            "Instagram": "https://www.instagram.com/granadacf/",
+            "Tiktok": "https://www.tiktok.com/@granadacf"
+        }
+    },
+    {
+        nombre: "Verdeluz",
+        descripcion: "Verdeluz, símbolo de compromiso con el desarrollo sostenible y la innovación ecológica, se une como patrocinador clave, dedicado al avance de soluciones energéticas limpias.",
+        logo: '/assets/participan/White/Empresas/verdeluz-white.png',
+        web: "https://verdeluz.es",
+        rrss: {}
+    },
+    {
+        nombre: "Nazaríes Intelligenia",
+        descripcion: "Consultora tecnológica especializada en desarrollo de software a medida, Nazaríes IT colabora con soluciones innovadoras y personalizadas para sus clientes.",
+        logo: '/assets/participan/White/Empresas/nazaries-white.png',
+        web: "https://www.nazaries.com",
+        rrss: {
+            "Twitter / X": "https://twitter.com/intelligenia",
+            "Instagram": "https://www.instagram.com/nazaries_intelligenia/",
+            "LinkedIn": "https://www.linkedin.com/company/nazaries-intelligenia/"
+        }
+    },
+    {
+        nombre: "GGTech",
+        descripcion: "GGTech, empresa tecnológica multidisciplinar, colabora en el desarrollo de videojuegos y ofrece soluciones tecnológicas en asociación con marcas de renombre.",
+        logo: '/assets/participan/White/Empresas/university-esports-white.png',
+        web: "https://ggtech.gg",
+        rrss: {
+            "Twitter": "https://twitter.com/GGTech_gg",
+            "Instagram": "https://www.instagram.com/ggtech_gg/",
+            "YouTube": "https://www.youtube.com/@GGtech_gg"
+        }
+    },
+    {
+        nombre: "Cívica Software",
+        descripcion: "Especializada en estrategias de autoservicio y tecnologías Big Data, Cívica Software diseña soluciones que permiten a sus clientes aprovechar al máximo sus datos.",
+        logo: '/assets/participan/White/Empresas/civica-white.png',
+        web: "https://civica-soft.com",
+        rrss: {}
+    },
+    {
+        nombre: "No Solo PC Informática",
+        descripcion: "Tienda de informática y reparación que ofrece soporte técnico y mantenimiento, No Solo PC colabora como Apple Independent Repair Provider.",
+        logo: '/assets/participan/White/Empresas/no-solo-pc-white.png',
+        web: "https://www.informaticanosolopc.com",
+        rrss: {}
+    },
+    {
+        nombre: "TAINE",
+        descripcion: "TAINE ofrece una amplia gama de productos de papelería, material escolar y artículos para bellas artes, destacándose por su compromiso con la calidad.",
+        logo: '/assets/participan/White/Empresas/taine-white.png',
+        web: "https://www.taine.es",
+        rrss: {
+            "Instagram": "https://www.instagram.com/tecnica_taine/"
+        }
+    },
+    {
+        nombre: "Fórmula Karting Granada",
+        descripcion: "Destino predilecto para aficionados al karting, Fórmula Karting Granada ofrece instalaciones de primera línea para una experiencia de alta velocidad.",
+        logo: '/assets/participan/White/Empresas/formula-karting-white.png',
+        web: "https://www.formulakarting.es",
+        rrss: {}
+    },
+    {
+        nombre: "GRX Customs",
+        descripcion: "GRX Customs, un proyecto de impresión 3D de antiguos alumnos de informática, colabora ofreciendo llaveros personalizados para los campeones de los torneos.",
+        logo: '/assets/participan/White/Empresas/grx-customs-white.png',
+        web: "https://www.instagram.com/grx_customs",
+        rrss: {}
+    },
+];
+---
+
+<Layout>
+    <Breadcrumb>
+        <Fragment slot="title">Patrocinadores</Fragment>
+        <Fragment slot="texto">Conoce a los patrocinadores que hacen posible este evento.</Fragment>
+    </Breadcrumb>
+
+    <div class="patrocinadores">
+        {patrocinadores.map(patrocinador => (
+            <Colaborador {...patrocinador} />
+        ))}
+    </div>
+</Layout>
+
+<style>
+.patrocinadores {
+    /* Estilos para el contenedor de patrocinadores */
+}
+</style>
