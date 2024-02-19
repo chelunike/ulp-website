@@ -20,6 +20,9 @@ dependencies:
   astro-compress:
     specifier: ^2.0.15
     version: 2.2.10
+  sharp:
+    specifier: ^0.33.2
+    version: 0.33.2
   swiper:
     specifier: ^11.0.4
     version: 11.0.6
