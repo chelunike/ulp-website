@@ -3,11 +3,16 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/layout/Breadcrumb.astro';
 import Colaborador from '../../components/Colaborador.astro';
 
-// Aquí podrías definir la información de cada colaborador, o incluso obtenerla de una API o un archivo de datos
+
 const colaboradores = [
-    {   
+    {
         nombre: "Universidad de Granada",
-        descripcion: "La Universidad de Granada, institución con casi quinientos años de historia, destaca en traducción e interpretación, ingeniería informática y matemáticas, siendo un referente educativo a nivel mundial.",
+        descripciones: [
+            "La Universidad de Granada (UGR) es una universidad pública española con sede en Granada y con campus en las ciudades de Granada, Ceuta y Melilla, lo que la convierte en la única universidad europea con dos campus en África. Es la cuarta universidad de España por número de alumnos, miembro del Grupo Coimbra y Campus de Excelencia Internacional.",
+            "Esta universidad es heredera de la Madraza del último Reino Nazarí y fue fundada oficialmente en 1531 por Carlos I de España. Por tanto, tiene casi quinientos años de historia y es considerada por ello como una de las universidades históricas de España.",
+            "Se sitúa entre las diez primeras de España y desde hace varios años ocupa el primer puesto en los estudios de traducción e interpretación, siendo la primera universidad española en impartir lengua danesa. A nivel mundial, es una de las cincuenta mejores universidades en ingeniería informática y una de las cien primeras en matemáticas.",
+            "Recibe cada año más de 2000 alumnos procedentes del programa Erasmus, lo que la convierte en el primer destino europeo dentro de este programa de movilidad.​ Además, ha sido elegida la mejor universidad de España por los estudiantes internacionales."
+        ],
         logo: '/assets/participan/White/Organismos/ugr-white.png',
         web: "http://www.ugr.es",
         rrss: {
@@ -17,8 +22,11 @@ const colaboradores = [
         }
     },
     {
-        nombre: "ETSIIT",
-        descripcion: "La ETSIIT, líder en estudios de informática y telecomunicaciones, será la sede del evento, ofreciendo espacios idóneos para el desarrollo de todas las actividades y competiciones programadas.",
+        nombre: "Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación (ETSIIT)",
+        descripciones: [
+            "La Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación (ETSIIT) de Granada es un centro docente universitario perteneciente a la Universidad de Granada, dedicado a la docencia e investigación de los estudios relacionados con la informática, las ciencias de la computación y las telecomunicaciones. Se sitúa entre las cincuenta mejores escuelas de ingeniería informática del mundo, es la sexta a nivel europeo y la número uno en España antes de Madrid y Valencia.",
+            "En ella, se llevará a cabo íntegramente todo el evento, proporcionando espacios donde se ubicarán todos los participantes y asistentes para el correcto desarrollo de las actividades y competiciones programadas."
+        ],
         logo: '/assets/participan/White/Organismos/etsiit-vertical-white.png',
         web: "https://etsiit.ugr.es",
         rrss: {
@@ -26,22 +34,40 @@ const colaboradores = [
         }
     },
     {
-        nombre: "TSTC",
-        descripcion: "El Departamento de Teoría de la Señal, Telemática y Comunicaciones de la UGR, centrado en Ingeniería Telemática y Teoría de la Señal y Comunicaciones, contribuye al avance tecnológico y educativo.",
+        nombre: "Departamento de Teoría de la Señal, Telemática y Comunicaciones (TSTC)",
+        descripciones: [
+            "El Departamento de Teoría de la Señal, Telemática y Comunicaciones (TSTC) de la Universidad de Granada fue creado en el curso 2004/2005, estando adscritas al mismo las áreas de conocimiento de Ingeniería Telemática (IT) y de Teoría de la Señal y Comunicaciones (TSC)."
+        ],
         logo: '/assets/participan/White/Organismos/tstc-white.png',
-        web: "https://tstc.ugr.es",
-        rrss: {}
+        web: "https://tstc.ugr.es/",
+        rrss: {
+            "Correo: tstc@ugr.es": "",
+            "Teléfono: +34 958 240 840": "",
+            "Fax: +34 958 240831": ""
+        }
     },
     {
-        nombre: "CSIRC",
-        descripcion: "El CSIRC apoya la UGR LAN Party brindando soporte en red para garantizar el éxito de las competiciones en línea, impulsando el uso eficiente de las TIC en la docencia, investigación y gestión.",
+        nombre: "Centro de Servicios de Informática y Redes de Comunicaciones (CSIRC)",
+        descripciones: [
+            "El Centro de Servicios de Informática y Redes de Comunicaciones de la Universidad de Granada tiene como misión desarrollar, mejorar y potenciar el uso de las Tecnologías de Información y Comunicación, dando soporte a la docencia, investigación y gestión de manera eficiente, e impulsando la innovación y la calidad dentro del marco estratégico de la Universidad de Granada.",
+            "Para esta edición de la UGR LAN Party, volverán a proporcionar soporte en red para el correcto desarrollo de todas las competiciones en línea, entre las cuales se encuentran League of Legends, VALORANT, Rocket League, Minecraft y Pokémon Showdown."
+        ],
         logo: '/assets/participan/White/Organismos/csirc-white.png',
         web: "https://csirc.ugr.es",
-        rrss: {}
+        rrss: {
+            "Correo": "csirc@ugr.es",
+            "Teléfono": "+34 958 241010"
+        }
     },
     {
-        nombre: "OSL",
-        descripcion: "La Oficina de Software Libre de la UGR promueve el uso del Software Libre, ofreciendo soporte, formación y reciclaje de equipos informáticos. Este año aportará proyectores de video para las distintas zonas del evento.",
+        nombre: "Oficina de Software Libre (OSL)",
+        descripciones: [
+            "Estamos encantados de informaros de que la Oficina de Software Libre colaborará en el desarrollo de la UGR LAN Party. Se trata de un organismo del Vicerrectorado de Transformación Digital que pretende dar a conocer el software libre, con los siguientes objetivos: Promover y Fomentar el uso del Software Libre, tanto dentro como fuera de la Universidad de Granada.",
+            "Dar soporte en distribuciones, licencias y otros temas relacionados a usuarios tanto nuevos como expertos.",
+            "Formar a la comunidad universitaria en el uso de herramientas libres, desde aplicaciones hasta sistemas operativos.",
+            "Reciclaje y reutilización de equipos informáticos de la Universidad de Granada.",
+            "Este año proporcionarán proyectores de video para las distintas zonas donde se emitirán las partidas y el streaming del evento, ofreciendo a los asistentes una oportunidad para disfrutar de manera más inmersiva en cada competición."
+        ],
         logo: '/assets/participan/White/Organismos/osl-white.png',
         web: "https://osl.ugr.es",
         rrss: {
@@ -50,8 +76,11 @@ const colaboradores = [
         }
     },
     {
-        nombre: "DEIIT",
-        descripcion: "La Delegación de Estudiantes de la ETSIIT se implica en la organización de la UGR LAN Party, fomentando la participación estudiantil y el asociacionismo en eventos de carácter tecnológico y educativo.",
+        nombre: "Delegación de Estudiantes de Ingeniería Informática y de Telecomunicación (DEIIT)",
+        descripciones: [
+            "La Delegación de Estudiantes de Ingeniería Informática y de Telecomunicación de la Universidad de Granada tiene las principales competencias: Informar y defender ante los Órganos de Gobierno de la ETSIIT los intereses y derechos de los estudiantes, exponer ante los diferentes Órganos de la ETSIIT las propuestas y peticiones de los estudiantes, proponer medidas para el mejor funcionamiento de la ETSIIT, fomentar el asociacionismo estudiantil, gestionar los recursos asignados para la consecución de sus fines, y atender las opiniones, quejas y sugerencias del sector estudiantil.",
+            "Para esta 6ª Edición de la UGR LAN Party contribuirán en la organización de competiciones y actividades, así como en gestiones de comunicación y difusión a través de redes sociales."
+        ],
         logo: '/assets/participan/White/Organismos/deiit-white.png',
         web: "https://deiit.ugr.es",
         rrss: {
@@ -60,8 +89,11 @@ const colaboradores = [
         }
     },
     {
-        nombre: "AESIT",
-        descripcion: "La Asociación de Antiguos Estudiantes de la ETSIIT fomenta los lazos entre egresados y la ETSIIT, colaborando en la UGR LAN Party a través de la organización de actividades como el torneo de Futbolín.",
+        nombre: "Asociación de Antiguos Estudiantes de la ETSIIT (AESIT)",
+        descripciones: [
+            "La Asociación de Antiguos Estudiantes de la Escuela Técnica Superior de Ingenierías de Informática y de Telecomunicación nace en el año 2016 con el fin de fomentar y reforzar los lazos de los egresados de Telecomunicaciones, Informática y el Doble Grado con la ETSIIT de la Universidad de Granada. Sus objetivos son mantener el vínculo de los egresados con la ETSIIT, realizar actividades de interés, colaborar con la Delegación de Estudiantes, prestar apoyo a los estudiantes que están finalizando sus estudios, y fomentar la convivencia en la ETSIIT.",
+            "Este año, colaborarán a través de la organización de un torneo de Futbolín, actividad en la que llevan siendo partícipes durante muchos años en la Escuela."
+        ],
         logo: '/assets/participan/White/Organismos/aesit-white.png',
         web: "https://aesit.es",
         rrss: {
@@ -72,7 +104,7 @@ const colaboradores = [
 
 ---
 
-<Layout>
+<Layout title="Colaboradores - ULP 2024">
     <Breadcrumb>
         <Fragment slot="title">Colaboradores</Fragment>
         <Fragment slot="texto">Conoce a los colaboradores que hacen posible este evento.</Fragment>
@@ -90,4 +122,3 @@ const colaboradores = [
     /* Estilos para el contenedor de colaboradores */
 }
 </style>
-
