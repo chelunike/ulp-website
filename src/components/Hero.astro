@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import heroImg from '../assets/img/52924759040_caabf0e4bc_o (1).jpg';
+import heroImg from '../assets/img/wallpaper.jpg';
 
 const orgs = ['UGR', 'TSTC', 'OSL', {org: 'ETSIIT', rename: 'etsiit-horizontal-white.png'}, 'DEIIT', 'CSIRC', 'AESIT']
 ---
@@ -10,11 +10,8 @@ const orgs = ['UGR', 'TSTC', 'OSL', {org: 'ETSIIT', rename: 'etsiit-horizontal-w
   id="home"
   class="relative overflow-hidden bg-gradient-to-bl from-primary/80 from-30% via-secondary/85 via-70% to-tertiary/95 h-[616px] pt-[120px] md:pt-[130px] lg:pt-[180px] pb-[75px] md:pb-[85px] lg:pb-[115px]"
 >
-  <div class="absolute -ml-48 inset-0 min-h-full min-w-full -z-10 flex items-center justify-center">
-    <!--! FIXME This gives the following error: free(): invalid size \n Aborted (core dumped).
-      The image as it is now wights a lot and has a poor loading time, so should be optimized -->
-    <!-- <Image src={heroImg} alt="" width={954} height={636} /> -->
-    <img src={heroImg.src} alt="" />
+  <div class="absolute inset-0 min-h-full min-w-full -z-10">
+    <img src={heroImg.src} alt="" class="w-full h-full object-cover" />
   </div>
   <div class="flex flex-col items-center justify-center relative h-full">
     <!-- <div
@@ -38,19 +35,10 @@ const orgs = ['UGR', 'TSTC', 'OSL', {org: 'ETSIIT', rename: 'etsiit-horizontal-w
       Inscríbete
     </a>
 
-    <div class="flex flex-row max-w-[90%] justify-center items-stretch px-10 gap-2 mt-14 lg:mt-16 max-h-[4rem] lg:max-h-20 h-6 md:h-auto">
-      { orgs.map(org => {
-        let imgSrc;
-        if (typeof org === 'string')
-          imgSrc = `/img/patrons/orgs/${org.replace(/ /, '-').toLowerCase()}-white.png`
-        else
-          imgSrc = `/img/patrons/orgs/${org.rename}`
-      
-        return <>
-          <img src={imgSrc} alt={typeof org === 'string' ? org : org.org} class="grow-0 shrink min-w-0" />
-        </>
-      }) }
+    <div class="mt-14 lg:mt-16 flex justify-center items-center">
+      <img src="./public/assets/participan/organizan.png" alt="Organizaciones participantes" class="max-w-[90%] max-h-[200px] h-auto" />
     </div>
+
   </div>
 </section>
 <!-- ====== Hero Section End -->
