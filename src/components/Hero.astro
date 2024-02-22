@@ -17,7 +17,7 @@ const orgs = ['UGR', 'TSTC', 'OSL', {org: 'ETSIIT', rename: 'etsiit-horizontal-w
 <!-- ====== Hero Section Start -->
 <section
   id="home"
-  class="relative overflow-hidden bg-gradient-to-bl from-primary/80 from-30% via-secondary/85 via-70% to-tertiary/95 h-[616px] pt-[120px] md:pt-[130px] lg:pt-[180px] pb-[75px] md:pb-[85px] lg:pb-[115px]"
+  class="relative overflow-hidden bg-gradient-to-bl from-primary/80 from-30% via-secondary/85 via-70% to-tertiary/95 h-[720px] pt-[120px] md:pt-[150px] lg:pt-[200px] pb-[75px] md:pb-[85px] lg:pb-[115px]"
 >
   <div class="absolute inset-0 min-h-full min-w-full -z-10">
     <img src={heroImg.src} alt="" class="w-full h-full object-cover" />
@@ -34,10 +34,38 @@ const orgs = ['UGR', 'TSTC', 'OSL', {org: 'ETSIIT', rename: 'etsiit-horizontal-w
     </h1>
 
     <p
-      class="texto-centrado mx-auto mb-9 max-w-[600px] font-medium text-base text-white sm:text-lg sm:leading-[1.44]"
+      class="texto-centrado mx-auto mb-4 max-w-[600px] font-medium text-base text-white sm:text-lg sm:leading-[1.44]"
     >
       ¡El mayor evento universitario de eSports de Granada!
     </p>
+
+
+<div class="flex items-center justify-center px-5 py-5 my-3">
+    <div class="text-primary">
+        <!--<h1 class="text-3xl text-center mb-3 font-extralight">When will pubs open in England?*</h1>-->
+        <div class="text-5xl text-center flex w-full items-center justify-center">
+            <!--<div class="text-2xl mr-1 font-extralight">in</div>-->
+            <div class="w-20 mx-1 p-2 bg-white rounded-lg">
+                <div class="font-mono leading-none" id="days">00</div>
+                <div class="font-mono uppercase text-sm leading-none">Dìas</div>
+            </div>
+            <div class="w-20 mx-1 p-2 bg-white rounded-lg">
+                <div class="font-mono leading-none" id="hours">00</div>
+                <div class="font-mono uppercase text-sm leading-none">Horas</div>
+            </div>
+            <div class="w-20 mx-1 p-2 bg-white rounded-lg">
+                <div class="font-mono leading-none" id="minutes">00</div>
+                <div class="font-mono uppercase text-sm leading-none">Minutos</div>
+            </div>
+            <!--<div class="text-2xl mx-1 font-extralight">and</div>-->
+            <div class="w-20 mx-1 p-2 bg-white rounded-lg">
+                <div class="font-mono leading-none" id="seconds">00</div>
+                <div class="font-mono uppercase text-sm leading-none">Segundos</div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <a
       href="#"
       class="inline-flex items-center justify-center rounded-md bg-white py-[14px] px-7 text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:text-body-color hover:bg-gray-2"
@@ -45,7 +73,7 @@ const orgs = ['UGR', 'TSTC', 'OSL', {org: 'ETSIIT', rename: 'etsiit-horizontal-w
       Inscríbete
     </a>
 
-    <div class="mt-14 lg:mt-16 flex justify-center items-center">
+    <div class="mt-8 lg:mt-10 flex justify-center items-center">
       <img src="./public/assets/participan/organizan.png" alt="Organizaciones participantes" class="max-w-[90%] max-h-[200px] h-auto" />
     </div>
 
