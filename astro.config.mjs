@@ -7,4 +7,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://ulp.ugr.es',
   integrations: [tailwind(), compress(), sitemap()]
+  redirects: {
+    "/201617" : "/",
+    "/201718" : "/",
+    "/201819" : "/",
+  }
 });
