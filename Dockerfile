@@ -1,36 +1,14 @@
-FROM node:lts-alpine as builder
-
-# Enable and configure pnpm
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable 
-
+FROM node:lts-alpine as runtime
 WORKDIR /app
 
 COPY . /app
 
-# Install dependencies and enable cache
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
-
-# Build app
+RUN npm install
 RUN npm run build
 
-FROM nginx:alpine as runtime
+ENV HOST=0.0.0.0
+ENV PORT=4321
 
-# Remove default nginx static assets
-RUN rm -rf /usr/share/nginx/html
+EXPOSE 4321
 
-# Copy built site
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-# Remove default nginx config
-RUN rm /etc/nginx/conf.d/default.conf
-
-# Copy custom nginx config
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-
-# Expose default Nginx port
-EXPOSE 80
-
-# Start Nginx with global directives and daemon turned off
-ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+CMD npm run dev -- --host
