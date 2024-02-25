@@ -13,7 +13,7 @@ COPY . /app
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
 # Build app
-RUN npm run build
+RUN pnpm run build
 
 FROM nginx:alpine as runtime
 
