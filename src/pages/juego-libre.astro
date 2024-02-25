@@ -9,8 +9,8 @@ const imgJuegoLibre = '../assets/activities/juego-libre.png';
 const imgHackiit = '../assets/activities/hackiit.png';
 const imgRacing = '../assets/activities/racing.png';
 const imgVR = '../assets/activities/vr.png';
-const imgStands = '../assets/activities/stands.png';
 const imgStreaming = '../assets/activities/streaming.png';
+const imgFightingGames = '../assets/activities/fighting.png';
 const linkTwitch = 'https://www.twitch.tv/ugr_lan_party';
 
 const juegoLibreDescripcion = `Las zonas de Juego Libre estarán habilitadas con el propósito de que los participantes de la ULP puedan acceder libremente, sin turno pre-asignado, para jugar en cualquier momento. Podréis encontrar gran variedad de opciones de juego: Consolas Retro, Playstation, Nintendo Switch, Nintendo Wii, Simulador de Fórmula 1, Gafas VR Meta Quest II, etc.`;
@@ -19,6 +19,7 @@ const streamingDescripcion = `Se podrá seguir todo el evento en vivo a través 
 const hackiitDescripcion = `En colaboración con la asociación de Hackiit, se ha preparado una zona donde se llevarán a cabo retos de Hacking Ético donde se podrá aprender y/o poner en práctica habilidades relacionadas con el hacking ético.`;
 const racingDescripcion = `A modo de reto complementario se ha creado una zona donde aquellos que lo deseen podrán utilizar el simulador de carreras. Se anotará la marca de tiempo que hacen y al final de la LAN Party se anunciará la mejor marca y al ganador del reto. Este obtendrá una plaza en el campeonato regional de Racing de Granada y alguna sorpresa adicional.`;
 const vrDescripcion = `Se habilitará una zona de VR donde los asistentes podrán probar las gafas inmersivas de realidad virtual Meta Quest II y disfrutar de distintos juegos. En cualquier momento será posible pedir ayuda a los organizadores en caso de no conocer el funcionamiento de las mismas.`;
+const fightingGamesDescripcion = `La zona de fighting games estará habilitada con el propósito de que los asistentes a la ULP jueguen libremente contra otros participantes, sin turno pre-asignado. Podréis encontrar los siguientes juegos: Dragon Ball Fighterz, Guilty Gear Strive y Mortal Kombat 11.`;
 
 ---
 
@@ -34,6 +35,8 @@ const vrDescripcion = `Se habilitará una zona de VR donde los asistentes podrá
       <JuegoLibresection titulo="Simulador de Racing" descripcion={racingDescripcion} imgPath={imgRacing} imgClass="rounded-lg shadow-lg" textClass="text-lg font-semibold text-gray-800" />
 
       <JuegoLibresection titulo="Realidad Virtual" descripcion={vrDescripcion} imgPath={imgVR} imgClass="rounded-lg shadow-lg" textClass="text-lg font-semibold text-gray-800" />
+
+      <JuegoLibresection titulo="Fighting Games" descripcion={fightingGamesDescripcion} imgPath={imgFightingGames} imgClass="rounded-lg shadow-lg" textClass="text-lg font-semibold text-gray-800" />
 
       <JuegoLibresection titulo="Reto Hacking Ético" descripcion={hackiitDescripcion} imgPath={imgHackiit} />
 
