@@ -7,8 +7,8 @@ const { nombre, descripciones, logo, web, rrss } = Astro.props;
     <img src={logo} alt={`Logotipo de ${nombre}`} class="logo" />
     <div class="contenido">
         <h3 class="nombre">{nombre}</h3>
-        {descripciones && descripciones.map((descripcion, index) => (
-            <p key={index} class="descripcion">{descripcion}</p>
+        {descripciones && descripciones.map((descripcion: string, index: string) => (
+            <p data-key={index} class="descripcion">{descripcion}</p>
         ))}
         <a href={web} target="_blank" class="web-link">Sitio Web</a>
         <div class="redes-sociales">
