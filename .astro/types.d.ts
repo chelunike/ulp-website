@@ -182,62 +182,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"post-02.md": {
-	id: "post-02.md";
-  slug: "post-02";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-03.md": {
-	id: "post-03.md";
-  slug: "post-03";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-04.md": {
-	id: "post-04.md";
-  slug: "post-04";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-05.md": {
-	id: "post-05.md";
-  slug: "post-05";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-06.md": {
-	id: "post-06.md";
-  slug: "post-06";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-07.md": {
-	id: "post-07.md";
-  slug: "post-07";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-08.md": {
-	id: "post-08.md";
-  slug: "post-08";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"post-09.md": {
-	id: "post-09.md";
-  slug: "post-09";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 };
 
 	};
