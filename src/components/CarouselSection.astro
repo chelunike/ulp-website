@@ -1,0 +1,69 @@
+
+<section
+  id="about"
+  class="bg-gray-1 dark:bg-dark-2 pt-20 pb-8 lg:pt-[120px] lg:pb-[70px]"
+>
+  <div class="container w-full px-4">
+    <div class="wow fadeInUp" data-wow-delay=".2s">
+      <div class="flex flex-wrap items-center">
+        <div class="w-full px-4">
+
+          <div x-data="imageSlider" class="relative mx-auto max-w-2xl overflow-hidden rounded-md p-2 sm:p-4">
+            <!-- items counter
+            <div class="absolute right-5 top-5 z-10 rounded-full bg-gray-600 px-2 text-center text-sm text-white">
+              <span x-text="currentIndex"></span>/<span x-text="images.length"></span>
+            </div>
+            -->
+
+            <button @click="previous()" class="absolute left-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+            </button>
+
+            <button @click="forward()" class="absolute right-5 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-gray-100 shadow-md">
+              <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+              </svg>
+            </button>
+
+            <div class="h-80 flex items-center" style="width: 30rem">
+              <template x-for="(image, index) in images">
+                <div x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute top-0">
+                  <img :src="image" alt="image" class="rounded-sm" />
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("imageSlider", () => ({
+      currentIndex: 1,
+      images: [
+        "https://live.staticflickr.com/65535/52924373451_bef0da189e_k.jpg",
+        "https://live.staticflickr.com/65535/52924372821_b924ead954_k.jpg",
+        "https://live.staticflickr.com/65535/52923787472_7f8a337dad_k.jpg",
+        "https://live.staticflickr.com/65535/52924372156_2d32fc86f3_k.jpg",
+      ],
+      previous() {
+        if (this.currentIndex > 1) {
+          this.currentIndex = this.currentIndex - 1;
+        }
+      },
+      forward() {
+        if (this.currentIndex < this.images.length) {
+          this.currentIndex = this.currentIndex + 1;
+        }
+      },
+    }));
+  });
+</script>
+
