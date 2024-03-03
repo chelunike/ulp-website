@@ -175,9 +175,9 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"post-01.md": {
-	id: "post-01.md";
-  slug: "post-01";
+"paella.md": {
+	id: "paella.md";
+  slug: "paella";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
