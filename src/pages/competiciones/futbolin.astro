@@ -9,9 +9,27 @@ const form_link = "https://forms.gle/NYofWoqrBUXBtLD49";
 const img_path = "/assets/backgrounds/futbolín.png";
 const aula = "Entrada: Bancos Rojos";
 const horario = "10:00h";
-
+const premios = [
+    {
+        puesto: '1º Primero',
+        listado: [
+            "Trofeo Futbolín",
+            "Medalla de Oro",
+            "Camiseta de la ULP",
+            "Alfombrillas"
+        ]
+    },
+    {
+        puesto: '2º Segundo',
+        listado: [
+            "Medalla de Plata",
+            "Llaveros ULP",
+            "Libreta ULP"
+        ]
+    }
+];
 ---
 
 <Competicion titulo={titulo} descripcion={desc} aula={aula} horario={horario}
-    ex_link={ex_link} reg_link={reg_link} form_link={form_link} img_path={img_path} >
+    ex_link={ex_link} reg_link={reg_link} form_link={form_link} img_path={img_path} premios={premios}>
 </Competicion>
