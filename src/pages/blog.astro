@@ -32,10 +32,11 @@ publishedBlogEntries.sort(function (a, b) {
                 <div class="mb-8 overflow-hidden rounded-[5px]">
                   <span class="block">
                     <img
-                      src={blogPostEntry.data.image.src}
-                      alt={blogPostEntry.data.image.alt}
-                      class="w-full ease-in duration-300 group-hover:rotate-6 group-hover:scale-125"
-                    />
+                src={blogPostEntry.data.image.src}
+                alt={blogPostEntry.data.image.alt}
+                class="w-full h-full object-cover ease-in duration-300 group-hover:rotate-6 group-hover:scale-125"
+                style={{ height: "600px" }}
+              />
                   </span>
                 </div>
                 <div>
