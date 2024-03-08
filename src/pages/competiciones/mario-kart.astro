@@ -9,9 +9,30 @@ const form_link = "https://forms.gle/Z66KXHwwViBCtij86";
 const img_path = "/assets/backgrounds/mario-kart.png";
 const aula = "-1.1 + -1.2";
 const horario = "10:00h";
-
+const premios = [
+    {
+        puesto: '1º Primero',
+        listado: [
+            "Trofeo Mario Kart",
+            "Medalla de Oro",
+            "4 Bonos para Fórmula Karting",
+            "Alfombrillas",
+            "Pack University Esports"
+        ]
+    },
+    {
+        puesto: '2º Segundo',
+        listado: [
+            "Medalla de Plata",
+            "2 Bonos para Fórmula Karting",
+            "Llaveros ULP",
+            "Libreta ULP",
+            "Pack University Esports"
+        ]
+    }
+];
 ---
 
 <Competicion titulo={titulo} descripcion={desc} aula={aula} horario={horario}
-    ex_link={ex_link} reg_link={reg_link} form_link={form_link} img_path={img_path} >
+    ex_link={ex_link} reg_link={reg_link} form_link={form_link} img_path={img_path} premios={premios} >
 </Competicion>

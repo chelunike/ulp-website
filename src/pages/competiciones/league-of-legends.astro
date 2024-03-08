@@ -9,9 +9,30 @@ const img_path = "/assets/backgrounds/lol.jpeg";
 const desc = "Sumérgete en el universo de Runaterra en este torneo épico de League of Legends. Forma tu equipo, elige a tus campeones y lucha por la gloria en la Grieta del Invocador.";
 const aula = "A2 + B1";
 const horario = "10:00h";
+const premios = [
+    {
+        puesto: '1º Primer equipo',
+        bono: '70€',
+        listado: [
+            "Trofeo LOL",
+            "Medallas de Oro",
+            "Camisetas de la ULP",
+            "Alfombrillas"
+        ]
+    },
+    {
+        puesto: '2º Segundo equipo',
+        bono: '35€',
+        listado: [
+            "Medallas de Plata",
+            "Llaveros ULP",
+            "Libretas ULP"
+        ]
+    }
+];
 
 ---
 
 <Competicion titulo={titulo} descripcion={desc} aula={aula} horario={horario}
-    ex_link={ex_link} reg_link={reg_link} form_link={form_link} img_path={img_path} >
+    ex_link={ex_link} reg_link={reg_link} form_link={form_link} img_path={img_path} premios={premios} >
 </Competicion>

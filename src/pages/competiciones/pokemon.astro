@@ -9,9 +9,27 @@ const form_link = "https://forms.gle/Grb7qTp628CFBkQz9";
 const img_path = "/assets/backgrounds/pokemon-showdown.png";
 const aula = "-1.1";
 const horario = "10:00h";
-
+const premios = [
+    {
+        puesto: '1º Primero',
+        bono: '70€',
+        listado: [
+            "Trofeo Pokemon",
+            "Medalla de Oro",
+            "Camiseta de la ULP",
+        ]
+    },
+    {
+        puesto: '2º Segundo',
+        bono: '35€',
+        listado: [
+            "Medalla de Plata",
+            "Llaveros ULP",
+        ]
+    }
+];
 ---
 
 <Competicion titulo={titulo} descripcion={desc} aula={aula} horario={horario}
-    ex_link={ex_link} reg_link={reg_link} form_link={form_link} img_path={img_path} >
+    ex_link={ex_link} reg_link={reg_link} form_link={form_link} img_path={img_path} premios={premios} >
 </Competicion>
