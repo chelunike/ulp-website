@@ -33,15 +33,11 @@ const {premios} = Astro.props;
             { premio.bono && (
             <h2 class="mb-6 text-4xl font-semibold text-dark dark:text-white xl:leading-[1.21] xl:text-[36px]">
               <span class="ml-1 -tracking-[2px]">{premio.bono}</span>
-              <span class="text-base font-normal text-body-color dark:text-dark-6">
-                Por Jugador
-              </span>
-              <p class="text-base text-body-color dark:text-dark-6" style="font-size:10pt;">*Bono canjeable en INFORMÁTICA NO SOLO PC </p>
             </h2>
             )}
 
             <div>
-              <h4 class="mb-3 text-lg font-medium text-dark dark:text-white">Premios Físicos</h4>
+              <h4 class="mb-3 text-lg font-medium text-dark dark:text-white">Más premios</h4>
 
               <div class="flex flex-col gap-[14px]">
                 {premio.listado.map((item : string) => (
