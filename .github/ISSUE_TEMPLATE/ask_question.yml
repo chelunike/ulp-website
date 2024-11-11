@@ -1,0 +1,47 @@
+name: "❓ Pregunta"
+description: Crear un nuevo ticket para realizar una pregunta o solicitud de información
+title: "[PREGUNTA] - <título>"
+labels: [
+  "question"
+]
+body:
+  - type: input
+    id: pregunta_principal
+    attributes:
+      label: "Pregunta Principal"
+      description: Especifica la pregunta principal que quieres realizar
+      placeholder: Escribe aquí tu pregunta...
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: "Contexto"
+      description: Proporciona contexto relevante para ayudar a entender tu pregunta
+      placeholder: Explica brevemente el contexto de la pregunta...
+    validations:
+      required: false
+  - type: textarea
+    id: intento_solucion
+    attributes:
+      label: "Intentos de Solución"
+      description: Describe cualquier intento o solución que hayas probado hasta ahora
+      placeholder: Describe las soluciones que ya has intentado...
+    validations:
+      required: false
+  - type: textarea
+    id: recursos_referencia
+    attributes:
+      label: "Recursos de Referencia"
+      description: Agrega cualquier enlace, documento o recurso que pueda ayudar a responder la pregunta
+      placeholder: Añade enlaces o descripciones de recursos de referencia...
+    validations:
+      required: false
+  - type: textarea
+    id: notas_adicionales
+    attributes:
+      label: "Notas Adicionales"
+      description: Agrega cualquier comentario o nota adicional sobre la pregunta
+      placeholder: Información o contexto adicional...
+    validations:
+      required: false
